@@ -53,7 +53,5 @@ To future proof your implementation, I’d recommend a few follow up steps:
 3. If you’re not using an implementation that uses a time cost or CPU cost, routinely reevaluate your parameters to check if they’re still intensive.
 	* Moore’s law states that hardware doubles in power every 2 years. As such, you should re-evaluate your parameters on a 2 year cadence to ensure that it is still correct for your use case. 
 
-Hopefully the pointers above have helped you to 
-
 
 [^1]: This is assuming that we’ve properly salted our creds, otherwise we’d still be vulnerable to Rainbow table lookups
