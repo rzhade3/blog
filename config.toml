@@ -1,7 +1,7 @@
 baseURL = 'https://blog.zhade.dev/'
 languageCode = 'en-us'
 title = "Blog"
-theme = 'pickles'
+theme = 'holy'
 [params]
   paginate = 10
 [markup.goldmark.renderer]
