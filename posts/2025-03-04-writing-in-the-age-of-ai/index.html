@@ -62,32 +62,33 @@ _:where(hr){h:2;_bg:fade-10;_bg:fade-70@dark;_my:3em}"><p>Is writing a dying art
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>*</span> Figure out how to get AI inline
 </span></span></code></pre></div><h3 id=drafting>Drafting</h3><p>Drafting is where I turn my outline into stream-of-consciousness words on paper. I don’t care about grammar, correctness, or style in this stage; it’s just about fleshing things out.</p><p>I use the <a href=https://bear.app>Bear app</a> to do my drafting because it is completely offline and supports Markdown. I’ve worked at GitHub for long enough that my internal monologue is basically in Markdown, so drafting this way feels very natural.</p><h3 id=grammarly>Grammarly</h3><p>Once the draft is complete, I plop it into <a href=https://app.grammarly.com/>Grammarly</a> for grammar corrections.</p><p>Why not directly into an LLM? Well, Grammarly doesn’t overly rewrite the text, especially the free version. This step is only for syntax and grammar corrections, ensuring a solid foundation before I focus on style. This approach also saves me some tokens— Grammarly is much cheaper to iterate within than an LLM.</p><h3 id=claude>Claude</h3><p>The final step is to run my essay through Claude. I’ve found Claude works better than ChatGPT for prose editing, but your mileage may vary.</p><p>I do two passes with Claude:</p><h4 id=evaluation>Evaluation</h4><p>The first pass checks for consistency and narrative flow between paragraphs. In the past, this was something I’d relied on peer review for, but now I get instant feedback from an LLM. Here’s the prompt I use for this:</p><pre tabindex=0><code>Please evaluate the following prose for consistency and flow between paragraphs. Drop notes on any paragraphs that need better transitions.
 </code></pre><h4 id=copy-editing>Copy Editing</h4><p>The second run is to edit and rewrite my prose for style. Here’s the prompt I use for this:</p><pre tabindex=0><code>Please lightly edit the following prose for grammar, technical correctness, and style according to the following style guide.
-</code></pre><p>To generate my style guide, I ran several of my past writings through Claude. Here’s mine for this blog:</p><pre tabindex=0><code># Personal Blog Style Guide
-
-## Tone and Voice
-* Write in first person using contractions (I&#39;ve, don&#39;t, it&#39;s)
-* Balance technical authority with conversational accessibility
-* Use direct questions to engage readers
-* Maintain candid authenticity without excessive formality
-
-## Structure
-* Use clear, concise headings (one to five words)
-* Start with a personal anecdote or problem statement
-* Use consistent heading hierarchy (H1 for title, H2 for sections, H3 for subsections)
-* Organize content from foundational concepts to more advanced applications
-
-## Formatting
-* Bold key concepts when first introduced
-* Format code, commands, or technical terms with backticks (algorithm)
-* Use blockquotes (&gt;) for summaries, takeaways, or emphasized recommendations
-* Create bullet lists for examples, options, or multiple related items
-* Use numbered lists for sequential steps
-* Include specific numbers, metrics and timestamps where applicable
-
-## Content Approach
-* Structure around problem-solution frameworks with practical, actionable advice
-* Define technical terms at first mention while respecting reader intelligence
-* Vary paragraph length (2-5 sentences) with clear topic sentences
-* Balance technical terminology with everyday language and occasional contemporary phrases
-* Link to relevant external resources with descriptive anchor text
-</code></pre><p>I separate Evaluation and Editing into two steps to ensure that the final piece still sounds like me— the goal is to be AI-enabled; not AI-powered. Most of the prose writing be written by a human, with the LLM being an editor rather than a ghostwriter.</p><h2 id=concessions>Concessions</h2><p>I’ll admit that, as a pre-LLM era LLM user, I’m not as LLM-native as the kids are. There are definitely ways to simplify and enhance my flow even further.</p><p>For example, using AI for pre-drafting—rubber ducking ideas before writing or outlining—could be a great usage. Chatting through a narrative to check that the thesis makes sense, and thus put together the structure of an outline, would save a lot of time.</p><p>Eventually, I will need to embrace using AI for drafting too. The efficiency gains of doing so make this almost inevitable. I’d like to integrate AI-powered inline suggestions, similar to Copilot Code suggestions. Using a well-trained style guide and examples should make the output close enough to human writing. Sure, this might take some of the soul out of writing, but to be honest, most of what I write (progress reports, issue write-ups, etc.) doesn’t need much of a soul at all.</p><p>Ultimately, AI is a tool just like any other. Used well, it makes you better. Used poorly, it makes you worse. Striking the right balance comes down to discipline and forethought.</p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8"></div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>
+</code></pre><p>To generate my style guide, I ran several of my past writings through Claude. Here’s mine for this blog:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span># Personal Blog Style Guide
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Tone and Voice
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>*</span> Write like a human
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Write in first person using contractions (I&#39;ve, don&#39;t, it&#39;s)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Balance technical authority with conversational accessibility
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Use direct questions to engage readers
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Maintain candid authenticity without excessive formality
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Structure
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>*</span> Use clear, concise headings (one to five words)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Start with a personal anecdote or problem statement
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Use consistent heading hierarchy (H1 for title, H2 for sections, H3 for subsections)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Organize content from foundational concepts to more advanced applications
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Formatting
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>*</span> Bold key concepts when first introduced
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Format code, commands, or technical terms with backticks (algorithm)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Use blockquotes (&gt;) for summaries, takeaways, or emphasized recommendations
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Create bullet lists for examples, options, or multiple related items
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Use numbered lists for sequential steps
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Include specific numbers, metrics and timestamps where applicable
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Content Approach
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>*</span> Structure around problem-solution frameworks with practical, actionable advice
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Define technical terms at first mention while respecting reader intelligence
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Vary paragraph length (2-5 sentences) with clear topic sentences
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Balance technical terminology with everyday language and occasional contemporary phrases
+</span></span><span style=display:flex><span><span style=color:#66d9ef>*</span> Link to relevant external resources with descriptive anchor text
+</span></span></code></pre></div><p>I separate Evaluation and Editing into two steps to ensure that the final piece still sounds like me— the goal is to be AI-enabled; not AI-powered. Most of the prose writing be written by a human, with the LLM being an editor rather than a ghostwriter.</p><h2 id=concessions>Concessions</h2><p>I’ll admit that, as a pre-LLM era LLM user, I’m not as LLM-native as the kids are. There are definitely ways to simplify and enhance my flow even further.</p><p>For example, using AI for pre-drafting—rubber ducking ideas before writing or outlining—could be a great usage. Chatting through a narrative to check that the thesis makes sense, and thus put together the structure of an outline, would save a lot of time.</p><p>Eventually, I will need to embrace using AI for drafting too. The efficiency gains of doing so make this almost inevitable. I’d like to integrate AI-powered inline suggestions, similar to Copilot Code suggestions. Using a well-trained style guide and examples should make the output close enough to human writing. Sure, this might take some of the soul out of writing, but let’s be honest, most of what I write (progress reports, issue write-ups, etc.) doesn’t need much of a soul at all.</p><p>Ultimately, AI is a tool just like any other. Used well, it makes you better. Used poorly, it makes you worse. Striking the right balance comes down to discipline and forethought.</p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8"></div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>
