@@ -11,6 +11,11 @@ Prompt injection is the most widely discussed emergent threat for Large Language
 
 In my opinion, instead of being a vulnerability in and of itself, prompt injection is a weakness that leads to other, more potent vulnerabilities. While it is true that prompt injection is undesirable, it doesn’t necessarily lead to any business value compromises and is also (at the time of writing) unsolvable. As such, it is better to treat it as a necessary side effect of using LLMs, architect around it, and not track it as a distinct vulnerability.
 
+## Vulnerabilities vs Weaknesses
+In cybersecurity, a weakness is a flaw in a system that can increase the likelihood of the system being exploited, but not necessarily *cause* an exploit. A vulnerability is a weakness that *can be exploited*. **The key difference is that vulnerabilities are directly exploitable; weaknesses may not be.**
+
+Weaknesses *can lead to* vulnerabilities, but the weakness itself is not typically tracked within a vulnerability management system. As such, deciding to treat prompt injection as a weakness has heavy implications as to how your organization manages and resolves it as a risk. 
+
 ## What Is Prompt Injection?
 Prompt injection occurs when someone manipulates input to a language model to alter its behavior in unintended ways—whether by injecting malicious instructions or bypassing established controls. The challenge lies in defining what "unintended" actually means, as developers and end users often have different intentions for how an LLM should function.
 
