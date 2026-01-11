@@ -1,0 +1,48 @@
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Lessons from a Month of Vibe Coding with Copilot CLI - Blog</title><meta name=description content="One of the greatest perks to working at GitHub is unlimited access to Copilot tokens, allowing me to vibe code as much as I want:
+With my unlimited AI, I spent most of my holiday break vibe coding up small utilities and games that I’d wanted to work on before but never had the time to finish.
+Here are a few lessons that a holiday season with irresponsible access to premium models taught me about vibe coding with Copilot CLI:"><meta name=author content="Rahul Zhade"><link href=https://unpkg.com/@master/normal.css rel=stylesheet><script src=https://unpkg.com/@master/style@1.5.0></script>
+<script src=https://unpkg.com/@master/styles@1.13.0></script>
+<script src=https://unpkg.com/master-styles-group></script>
+<script src=https://unpkg.com/themes.js></script>
+<script>window.themes=window.themes||new window.Themes</script><style>:root{--font-sans:"Inter var", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji}</style></head><body class="bg:fade-84@dark font:fade-16@dark font:sans"><nav class="w:full h:90 fixed bg:fade-84/.95@dark bg:white z:1000"><div class="h:full
+w:full
+max-w:1200
+mx:auto
+px:32
+d:flex
+align-items:center"><div><a href=/ class="mr-3 font:extralight">Blog</a></div><div class=ml:auto></div></div></nav><div class="d:flex flex:column@<=sm pt:90 px:24 jc:center gap:44 word-break:break-word"><div class="max-w:700 w:full box:content-box"><article class="box:border-box pt:32"><header class=mb:32><div class="font:40 font:extrabold">Lessons from a Month of Vibe Coding with Copilot CLI</div><div class="mt:16 f:fade-60"><time>Jan 11, 2026</time></div></header><div class="_:where(a):hover{text-decoration-color:fade}
+_:where(a){text-decoration:2;underline;fade-10;_text-decoration-color:fade-70@dark}
+_:where(blockquote){bl:5;solid;fade-76/.1;_bl:5;solid;fade-34/.1@dark}
+_:where(code){font:90%;_v:middle}
+_:where(code:not(.highlight_*,pre_*)){p:2;6;_r:4}
+_:where(del){text-decoration:1;line-through;fade-68;_text-decoration-color:red-64@dark}
+_:where(figcaption){text:14;_p:10;20;0;_width:fit;_mx:auto;_font:fade-56;_font:fade-57@dark}
+_:where(h1){font:40;_font:extrabold}
+_:where(h1,h2,h3)+:where(h1,h2,h3){mt:.5em}
+_:where(h1,h2,h3,h4,h5,h6){mt:2em}
+_:where(h2){mb:1em;_font:32}
+_:where(h3){font:24}
+_:where(h4){font:20}
+_:where(h5){font:16}
+_:where(h6){font:14}
+_:where(li)::marker{font:fade-44;_font:fade-68@dark}
+_:where(li){pl:.375em}
+_:where(mark){text-decoration:1;underline;#fce016;_bg:transparent;_text-decoration-color:rgb(252;224;22/.5)@dark}
+_:where(p,li){font:fade-76;_font:16;_line-height:1.65;_font:fade-34@dark}
+_:where(p,pre,blockquote,figure,ul,ol,table){my:1.125em}
+>:first-child{mt:0!}
+_:where(pre){p:20;_r:8;_overflow:auto}
+_:where(pre,code:not(.highlight_*)){bg:fade-2;_bg:fade-92!@dark}
+_:where(strong,b,a,code:not(.highlight_*),mark,del){font:fade-92;_font:fade-12@dark}
+_:where(table){width:full;_border-spacing:0}
+_:where(td){v:baseline}
+_:where(td,th):first-child{pl:0}
+_:where(td,th):last-child{pr:0}
+_:where(td,th){bb:1;solid;fade-92/.06;_p:6;_b:fade-4/.04@dark}
+_:where(th){font:fade-78;_font:14;_text:left;_font:fade-12@dark}
+_:where(th,p_code,li_code,a,mark){font:semibold;_font:medium@dark}
+_:where(ul){list-style-type:disc}
+_:where(ul,ol,blockquote){pl:1.5em}
+_:where(video,img){max-width:full}
+_:where(a,mark){text-underline-offset:3}
+_:where(hr){h:2;_bg:fade-10;_bg:fade-70@dark;_my:3em}"><p>One of the greatest perks to working at GitHub is unlimited access to Copilot tokens, allowing me to vibe code as much as I want:</p><p><img src=./images/unlimited-copilot-tokens.png alt="Unlimited Copilot tokens"></p><p>With my unlimited AI, I spent most of my holiday break vibe coding up small utilities and games that I’d wanted to work on before but never had the time to finish.</p><p>Here are a few lessons that a holiday season with irresponsible access to premium models taught me about vibe coding with <a href=https://github.com/features/copilot/cli>Copilot CLI</a>:</p><h3 id=1-stage-often-commit-often>1. Stage often, commit often</h3><p>Version control is twice as important for vibe coding as normal collaboration, as the agent can iterate much faster than a human.</p><p>Catastrophic failure is an unfortunate reality of vibe coding. To prevent an agent’s mistake from destroying all your progress, I try to stage changes as soon as they’re satisfactory. This helps me revert to a previously working version easily.</p><p>I don’t let Copilot stage or commit any changes; the only Git command I allow it to run is <code>git diff</code>. Allowing staging could allow the agent to clutter up your version control, breaking it.</p><h3 id=2-planning-and-docs-save-a-million-tokens>2. Planning and docs save a million tokens</h3><p>Docs-driven Development is the best way to have a successful vibe coding session. By the time I begin vibing out code, I have a fully fleshed out <code>docs/</code> folder.</p><p>I start each vibe coding session by chatting through the architecture with Copilot. I find this useful to validate deployment strategies, cloud primitives to use, and general code architecture. This step is also useful because it lets Copilot understand all and properly document these decisions in a format that is clear for subsequent agents to follow.</p><p>Giving the agent information about the deployment strategy also helps it write code that is idiomatic to the platform in which you decide to deploy. For example, agents tend to write serverful code. Giving the agent context that your project will be deployed to Azure Functions helps it write code idiomatically and correctly the first time.</p><h3 id=3-build-atomically-with-clear-contracts>3. Build atomically with clear contracts</h3><p>Vibe coding works best with microservice or <a href=https://www.ardanlabs.com/blog/2017/02/package-oriented-design.html>package-oriented</a> architectures, as they’re easier to understand and distribute work across.</p><p>When a codebase isn’t properly decomposed, agents very quickly lose alignment. As such, avoiding a monolith is crucial for fast and successful development.</p><p>In the planning stage, I ask the agent to break down the architecture into packages and folders. Then, I ask it to <code>mkdir</code> each of these folders, and document the API contract in a README in each folder. This gives each subsequent agent a clear context for how code should be written and integrated.</p><h3 id=4-dont-let-conversation-history-get-too-long>4. Don’t let conversation history get too long</h3><p>The behavior after Copilot CLI’s conversation history gets truncated is <em>very</em> difficult to predict. It is difficult to pinpoint exactly what parts of the conversation history are truncated, so it’s best to prepare for when you run out of context.</p><p>When you arrive at a logical stopping point, have Copilot write down instructions for future agents in a README and end the session. This way, you don’t have to deal with a session getting overly long and losing context, and you can control exactly what context an agent has access to.</p><h3 id=5-determinism-wins-over-non-determinism>5. Determinism wins over non-determinism</h3><p>AI is unreliable, so it’s much better to ask it to do things deterministically, rather than rely entirely on the agent’s AI. For example, <a href=https://github.com/davidfowl/tally>Tally’s</a> workflow relies on regexes that are generated deterministically but are validated by an agent. This kind of workflow works much better than relying entirely on the agent’s AI brain doing all computations.</p><p>I think about whether something can be done deterministically before delegating it to an agent. I rely heavily on JSON schemas, linters, and any other ways in which I can deterministically validate correctness.</p><h3 id=6-use-custom-instructions>6. Use custom instructions</h3><p>Copilot’s default instruction set is pretty good for vibe coding, but custom instructions help fine-tune it for my specific workflow. For example, I find that Copilot overly documents every change that it makes. I use a <a href=https://docs.github.com/en/copilot/how-tos/use-copilot-agents/use-copilot-cli>custom instructions file</a> that I paste into all new repositories that I create to tell Copilot <em>not</em> to document every feature change with a separate Markdown file.</p><h2 id=conclusion>Conclusion</h2><p>Clear communication and atomicity are always the best ways of getting big projects done. As such, most of these lessons should not be a big surprise to anyone who is used to doing engineering with a large team. Vibe coding just makes these more important due to the speed of development and the number of agents involved in a session.</p><p><em>Note: all opinions are my own and do not reflect those of my employer.</em></p></div></article><footer class=py:24><div class="f:fade-30 f:14 mb:8"></div><div class="f:fade-60 f:12">Theme <a class=f:bold href=https://github.com/serkodev/holy _target=_blank>Holy</a></div></footer></div></div></body></html>
